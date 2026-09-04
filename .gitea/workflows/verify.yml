@@ -1,0 +1,30 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate JSON
+        run: |
+          python -m json.tool .agents/plugins/marketplace.json >/dev/null
+          python -m json.tool plugins/codex-bughunter/.codex-plugin/plugin.json >/dev/null
+      - name: Check scripts and Python
+        run: |
+          bash -n plugins/codex-bughunter/scripts/install.sh
+          bash -n plugins/codex-bughunter/scripts/hunt.sh
+          python -m compileall -q plugins/codex-bughunter/engine plugins/codex-bughunter/cbh plugins/codex-bughunter/scripts
+      - name: Lint skills
+        working-directory: plugins/codex-bughunter
+        run: python scripts/lint_skills.py
+      - name: Unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Build package
+        run: python -m pip wheel --no-deps --wheel-dir dist ./plugins/codex-bughunter

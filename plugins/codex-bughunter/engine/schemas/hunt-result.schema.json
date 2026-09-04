@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["vulnerable", "severity", "evidence", "request", "hosts_contacted", "proof_note"],
+  "properties": {
+    "vulnerable": {"type": "boolean"},
+    "severity": {"enum": ["none", "low", "medium", "high", "critical"]},
+    "evidence": {"type": "string"},
+    "request": {"type": "string"},
+    "hosts_contacted": {"type": "array", "items": {"type": "string"}},
+    "proof_note": {"type": "string"}
+  }
+}

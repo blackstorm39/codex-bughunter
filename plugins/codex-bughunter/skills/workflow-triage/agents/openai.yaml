@@ -1,0 +1,6 @@
+interface:
+  display_name: "BugHunter: Triage"
+  short_description: "Run the explicit triage workflow"
+  default_prompt: "Use $codex-bughunter:workflow-triage on an authorized target or finding."
+policy:
+  allow_implicit_invocation: false

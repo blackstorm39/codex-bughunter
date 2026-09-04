@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["real", "severity", "reason"],
+  "properties": {
+    "real": {"type": "boolean"},
+    "severity": {"enum": ["none", "low", "medium", "high", "critical"]},
+    "reason": {"type": "string"}
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "BugHunter: Hunt"
+  short_description: "Run the explicit hunt workflow"
+  default_prompt: "Use $codex-bughunter:workflow-hunt on an authorized target or finding."
+policy:
+  allow_implicit_invocation: false

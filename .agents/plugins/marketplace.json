@@ -1,0 +1,20 @@
+{
+  "name": "codex-bughunter-local",
+  "interface": {
+    "displayName": "Codex Bughunter Local"
+  },
+  "plugins": [
+    {
+      "name": "codex-bughunter",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-bughunter"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Security"
+    }
+  ]
+}

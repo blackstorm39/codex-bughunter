@@ -1,0 +1,43 @@
+{
+  "name": "codex-bughunter",
+  "version": "2.1.1",
+  "description": "Codex workflows and skills for authorized bug hunting and external red-team assessments.",
+  "author": {
+    "name": "Sachin Sharma",
+    "url": "https://github.com/elementalsouls"
+  },
+  "homepage": "https://git.ot9.me/Adminx/codex-bughunter",
+  "repository": "https://git.ot9.me/Adminx/codex-bughunter",
+  "license": "MIT AND CC-BY-4.0",
+  "keywords": [
+    "security",
+    "bug-bounty",
+    "red-team",
+    "pentest",
+    "recon",
+    "osint"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex BugHunter",
+    "shortDescription": "Authorized bug-hunting and red-team workflows",
+    "longDescription": "Scoped recon, hunting, validation, and reporting workflows for assets you own or are authorized to assess. Includes 83 domain skills and 15 explicit workflows.",
+    "developerName": "Sachin Sharma / Codex port",
+    "category": "Security",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://git.ot9.me/Adminx/codex-bughunter",
+    "privacyPolicyURL": "https://git.ot9.me/Adminx/codex-bughunter/src/branch/main/plugins/codex-bughunter/SECURITY.md",
+    "termsOfServiceURL": "https://git.ot9.me/Adminx/codex-bughunter/src/branch/main/plugins/codex-bughunter/LICENSE-CONTENT",
+    "defaultPrompt": [
+      "Map and rank the attack surface for this authorized target.",
+      "Validate this finding before drafting a report.",
+      "Choose the right hunt skill for this scoped target."
+    ],
+    "brandColor": "#B8232C",
+    "logo": "./assets/banner-codex.png"
+  }
+}

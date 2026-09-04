@@ -1,0 +1,6 @@
+interface:
+  display_name: "BugHunter: Validate"
+  short_description: "Run the explicit validate workflow"
+  default_prompt: "Use $codex-bughunter:workflow-validate on an authorized target or finding."
+policy:
+  allow_implicit_invocation: false

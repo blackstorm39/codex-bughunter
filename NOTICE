@@ -1,0 +1,7 @@
+This distribution includes adapted material from Claude-BugHunter.
+
+Upstream: https://github.com/elementalsouls/Claude-BugHunter
+Upstream commit: f032240d876c40465770ab4839e7257b9e7254e8
+Author: Sachin Sharma
+
+See plugins/codex-bughunter/UPSTREAM.md for conversion and attribution details.
